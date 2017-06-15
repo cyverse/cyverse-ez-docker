@@ -1,2 +1,2 @@
-- src: CyVerse-Ansible.ez-docker
-  name: ez-docker
+- src: CyVerse-Ansible.docker
+  name: docker
