@@ -20,4 +20,4 @@
     - name: including cyverse ez role
       static: no
       include_role:
-        name: ez-docker
+        name: docker
