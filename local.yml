@@ -11,7 +11,7 @@
       ignore_errors: yes
 
     - name: remove the ez role if update is forced
-      command: ansible-galaxy remove ez-docker
+      command: ansible-galaxy remove docker
       when: ez_force_update is defined
 
     - name: pull in any Ansible Galaxy roles from the requirements.yml
