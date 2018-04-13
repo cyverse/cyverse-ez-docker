@@ -12,11 +12,11 @@
 
     - name: remove the ez role if update is forced
       command: ansible-galaxy remove docker
-      when: ez_force_update is defined
+      when: ez_force_update is defined and ez_force_update == true
 
     - name: remove the ez role if update is forced
       command: ansible-galaxy remove portainer
-      when: ez_force_update is defined
+      when: ez_force_update is defined and ez_force_update == true
 
     - name: pull in any Ansible Galaxy roles from the requirements.yml
       command: "ansible-galaxy install -r {{ playbook_dir }}/requirements.yml"
