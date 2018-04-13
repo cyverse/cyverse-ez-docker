@@ -18,8 +18,9 @@
       command: ansible-galaxy remove portainer
       when: ez_force_update is defined and ez_force_update == true
 
+    # note, ignoring errors since ansible-galaxy considers an existing role as an error
     - name: pull in any Ansible Galaxy roles from the requirements.yml
-      command: "ansible-galaxy install -r {{ playbook_dir }}/requirements.yml"
+      command: "ansible-galaxy install -i -r {{ playbook_dir }}/requirements.yml"
 
     - name: including cyverse ez role
       static: no
