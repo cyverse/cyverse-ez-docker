@@ -1,5 +1,5 @@
-- src: CyVerse_Ansible.docker
+- src: CyVerse-Ansible.docker
   name: docker
 
-- src: CyVerse_Ansible.portainer
+- src: CyVerse-Ansible.portainer
   name: portainer
