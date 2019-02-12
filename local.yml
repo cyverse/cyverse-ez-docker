@@ -1,4 +1,5 @@
 # This playbook assumes that cyverse-ez-docker directory is located in /opt/cyverse-ez-docker/
+# EJS Note 2/12/2019: ansible-galaxy fails ssl cert verify for galaxy.ansible.com/api. Can revert when fixed later
 
 - name: this playbook will setup ez locally
   hosts: 127.0.0.1
@@ -20,7 +21,7 @@
 
     # note, ignoring errors since ansible-galaxy considers an existing role as an error
     - name: pull in any Ansible Galaxy roles from the requirements.yml
-      command: "ansible-galaxy install -i -r {{ playbook_dir }}/requirements.yml"
+      command: "ansible-galaxy install -c -i -r {{ playbook_dir }}/requirements.yml"
 
     - name: including cyverse ez role
       static: no
