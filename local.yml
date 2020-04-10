@@ -24,12 +24,10 @@
       command: "ansible-galaxy install -c -i -r {{ playbook_dir }}/requirements.yml"
 
     - name: including cyverse ez role
-      static: no
       include_role:
         name: docker
 
     - name: include portainer role
-      static: no
       include_role:
         name: portainer
       when: ansible_portainer_enabled is defined and ansible_portainer_enabled == true
